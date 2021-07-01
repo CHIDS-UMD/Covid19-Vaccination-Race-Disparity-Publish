@@ -7,9 +7,7 @@ This public repository contains the materials for reproducing the results descri
 
 - [Content Description](#materials)
 
-- [Main Regression Result](#main-reg)
-
-    * [Base Model Regression Table](#base-model)
+- [Main Regression](#main-reg)
 
  
 - [Robustness Checks](#robustness-checks)
@@ -60,12 +58,7 @@ Below, we also provide additional summary statistics, exploratory data analysis,
 
 <a name="main-reg"/>
 
-## Main Regression Result
-
-
-<a name='base-model'>
-   
-### Base Model Regression Table
+## Main Regression
 
 Below, we provide the source code for regression table presented in Agarwal et al. (2021).
    
