@@ -7,21 +7,6 @@ This public repository contains the materials for reproducing the results descri
 
 - [Content Description](#materials)
 
-- [Data Sources for COVID-19 Racial Vaccination by States](#covid-race-data-by-state)
-
-    * [COVID-19 Vaccination Disparity Map](#covid-map)
-    
-    * [Hispanic White Porportion for Each State](#hispanic-white-rate)
-
-
-
-- [Missingness](#missing)
-
-- [Summary Statistics for Final Data](#summary-statistics)
-
-    * [Correlation Matrix Heatmap for Final Data](#correlation-map)
-    
-
 - [Main Regression Result](#main-reg)
 
     * [Base Model Regression Table](#base-model)
@@ -73,66 +58,6 @@ Below, we also provide additional summary statistics, exploratory data analysis,
 
 
 
-<a name="covid-race-data-by-state"/>
-
-## Data Sources for COVID-19 Racial Vaccination by States
-
-_Note_. Valid counties are those that were included in our main regression analyses, following the exclusion criteria outlined below in the sample construction figure. 
-
-
-<a name="hispanic-white-rate"/>
-
-## Hispanic White Porportion for Each State
-
-<a name="covid-map"/>
-
-### COVID-19 Vaccination Disparity Map
-
-<!-- ![](_img/map.png) -->
-
-
-**Figure S1.** Map represents COVID-19 vaccination disparities across 1,186 counties with data by race as of April 19, 2021. Red indicates higher vaccination rates among Whites, and blue indicates higher vaccination rates among Blacks. The vaccination rate in some counties with small numbers of Blacks or Whites exceeded 100%. We exclude those counties in Figure 1. In the regression using data from 756 counties, the range of vaccination disparity is between -52.0% and 66.2%. 
-
-
-
-<a name="missing"/>
-
-## Missingness
-
-<!-- ![](_img/missing.png) -->
-
-
-**Figure S2.** Patterns of missingness in predictor and outcome variables where white lines indicate values are missing.
-
-
-
-<a name="sample-construction"/>
-
-## Sample Construction
-
-The filtering of the data collected for all counties on April 19, 2021. The same method is also applied to the data on March 27 2021, April 07 2021, May 20 2021.
-
-<!-- ![](_img/Workflow.png) -->
-
-
-**Figure S3.** Flowchart depicting sample construction.
-
-
-<a name="summary-statistics"/>
-
-## Summary Statistics for Final Data
-
-We present descriptive statistics of the variables in our regression analysis in non-standardized units. The table below presents rate and proportion data as percentages for ease of interpretation.  	
-
-
-<a name="correlation-map"/>
-
-### Correlation Matrix Heatmap for Final Data
-
-<!-- ![](_img/correlation.png) -->
-
-**Figure S4.** A correlation matrix heatmap illustrate bivariate relationships among all variables in our main regression results and robustness checks.
-
 <a name="main-reg"/>
 
 ## Main Regression Result
@@ -142,7 +67,7 @@ We present descriptive statistics of the variables in our regression analysis in
    
 ### Base Model Regression Table
 
-Below, we provide the regression table presented in Agarwal et al. (2021) for comparison to the robustness checks. 
+Below, we provide the source code for regression table presented in Agarwal et al. (2021).
    
 You can get the stata code to do this regression by:
    ```shell
@@ -164,7 +89,7 @@ You can get the stata code to do this regression by:
     
  ### Different Age Group Controls
   
-Below, we report regression tables controlling for proportion of population above age 75 and disparities in the proportion of population above age 75 for the White and Black population. We add this variable as a control to account for the fact that older adults were prioritized early on in the vaccine rollout. In addition, we add additional control variables to account for the population that was eligible for the vaccines. Based on available demographic data, we approximate the vaccine eligible population by controlling for the proportion of population ages 15-74 in one set of analyses and the proportion of population ages 20-74 in a second set of analyses.
+Below, we provide the source codes to produce regression tables by controlling for proportion of population above age 75 and disparities in the proportion of population above age 75 for the White and Black population. We add this variable as a control to account for the fact that older adults were prioritized early on in the vaccine rollout. In addition, we add additional control variables to account for the population that was eligible for the vaccines. Based on available demographic data, we approximate the vaccine eligible population by controlling for the proportion of population ages 15-74 in one set of analyses and the proportion of population ages 20-74 in a second set of analyses.
  
    You can get the stata code to do this regression by:
    ```shell
@@ -192,6 +117,8 @@ Below, we report regression tables controlling for proportion of population abov
     
 ### Different Dates and Full Vaccination Rate Types
    
+    We compiled data from multiple time points (March 27, April 07, and May 20, 2021) to compare against our main findings based on data from April 19, 2021. In addition, we checked the same model using full vaccination data from May 20, 2021 to explore whether our pattern of findings still hold.
+
    
    You can get the stata code to do this regression by:
    ```shell
@@ -200,18 +127,15 @@ Below, we report regression tables controlling for proportion of population abov
    or directly check the data and stata code in the folder `StataCode/diff_dates` [code](https://github.com/CHIDS-UMD/Covid19-Vaccination-Race-Disparity-Publish/blob/main/StataCode/diff_dates).
    
    
-   
- We compiled data from multiple time points (March 27, April 07, and May 20, 2021) to compare against our main findings based on data from April 19, 2021. In addition, we run the same model using full vaccination data from May 20, 2021 to explore whether our pattern of findings still hold.
-
 
 <a name="exodus-test"/>
 
    
    
 ### Residential Mobility
-Some regions saw large rates of residential mobility (people moving in or out) during the course of the pandemic. To account for this, we collected data on areas that saw the greatest movement during the pandemic based on data from 75,000 moves (HireAHelper Migration Report, 2021). The list includes 10 cities with the greatest net increase in movement and the 10 cities with the greatest net decrease in movement, some of which are not represented in the counties included in our analysis. We exclude the 12 relevant counties represented in our data, and run additional robustness checks reported below.
+Some regions saw large rates of residential mobility (people moving in or out) during the course of the pandemic. To account for this, we collected data on areas that saw the greatest movement during the pandemic based on data from 75,000 moves (HireAHelper Migration Report, 2021). The list includes 10 cities with the greatest net increase in movement and the 10 cities with the greatest net decrease in movement, some of which are not represented in the counties included in our analysis. We exclude the 12 relevant counties represented in our data。
    
-   You can get the stata code to do this regression by:
+   You can get the stata code to do this robustness check by:
    ```shell
    python statacode.py --task residential_mobility 
    ```
@@ -226,7 +150,7 @@ Some regions saw large rates of residential mobility (people moving in or out) d
    
    
    
-   You can get the stata code to do this regression by:
+   You can get the stata code to do this robustness check by:
    ```shell
    python statacode.py --task recent_positive_rate 
    ```
@@ -240,9 +164,9 @@ Some regions saw large rates of residential mobility (people moving in or out) d
 
 ### Avoid Collinearity by Droping `Hesitancy` Variable
 
-   We reviewed the Variable Inflation Rate (VIF) for our main regression model, finding that vaccine hesitancy had a VIF that exceeds the suggested cut-off value of 10. To assess how much the multicollinearity may have an impact on our findings, we try models excluding vaccine hesitancy, and report those below. 
+   We reviewed the Variable Inflation Rate (VIF) for our main regression model, finding that vaccine hesitancy had a VIF that exceeds the suggested cut-off value of 10. To assess how much the multicollinearity may have an impact on our findings, we try models excluding vaccine hesitancy. 
    
-   You can get the stata code to do this regression by:
+   You can get the stata code to do this robustness check by:
    ```shell
    python statacode.py --task avoid_collinearity 
    ```
@@ -270,9 +194,9 @@ Some regions saw large rates of residential mobility (people moving in or out) d
    
  ### Vaccination Rate on Whole White Population
   
- In this robustness check, we treat all the State in the same way in terms of calculate the COVID-19 White Vaccination Rate: Reported-CvdVax-White / Total-White-Population. Then we ran the models with different covariates. The results are consistent to the main regression.
+ In this robustness check, we treat all the State in the same way in terms of calculate the COVID-19 White Vaccination Rate: Reported-CvdVax-White / Total-White-Population. Then we ran the models with different covariates. 
    
-   You can get the stata code to do this regression by:
+   You can get the stata code to do this robustness check by:
    ```shell
    python statacode.py --task vax_rate_on_all_white 
    ```
