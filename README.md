@@ -84,7 +84,7 @@ You can get the stata code to do this regression by:
   
 Below, we provide the source codes to produce regression tables by controlling for proportion of population above age 75 and disparities in the proportion of population above age 75 for the White and Black population. We add this variable as a control to account for the fact that older adults were prioritized early on in the vaccine rollout. In addition, we add additional control variables to account for the population that was eligible for the vaccines. Based on available demographic data, we approximate the vaccine eligible population by controlling for the proportion of population ages 15-74 in one set of analyses and the proportion of population ages 20-74 in a second set of analyses.
  
-   You can get the stata code to do this regression by:
+   You can get the stata code to do this robustness check by:
    ```shell
    python statacode.py --task check_age_all 
    python statacode.py --task check_age_above15 
@@ -99,7 +99,7 @@ Below, we provide the source codes to produce regression tables by controlling f
   As additional robustness checks, we also model alternative operationlizations of disparity. Specifically, we model a ratio-based definition (White Vaccination Rate/Black Vaccination Rate), the log of that ratio, and an outcome that scales the absolute disparity by the overall vaccination rate of the White and Black populations in a given county.
  
     
-   You can get the stata code to do this regression by:
+   You can get the stata code to do this robustness check by:
    ```shell
    python statacode.py --task check_disparity_types 
    ```
@@ -113,7 +113,7 @@ Below, we provide the source codes to produce regression tables by controlling f
     We compiled data from multiple time points (March 27, April 07, and May 20, 2021) to compare against our main findings based on data from April 19, 2021. In addition, we checked the same model using full vaccination data from May 20, 2021 to explore whether our pattern of findings still hold.
 
    
-   You can get the stata code to do this regression by:
+   You can get the stata code to do this robustness check by:
    ```shell
    python statacode.py --task diff_dates 
    ```
