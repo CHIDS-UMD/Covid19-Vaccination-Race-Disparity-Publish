@@ -149,7 +149,7 @@ You can get the stata code to do this regression by:
    python statacode.py --task main_regression 
    python statacode.py --task main_regression_originalX
    ```
-   or directly check the data and stata code in the folder `StataCode/main_regression` and `StataCode/main_regression_originalX`
+   or directly check the data and stata code in the folder `StataCode/main_regression` [code](https://github.com/CHIDS-UMD/Covid19-Vaccination-Race-Disparity-Publish/blob/main/StataCode/main_regression) and `StataCode/main_regression_originalX` [code](https://github.com/CHIDS-UMD/Covid19-Vaccination-Race-Disparity-Publish/blob/main/StataCode/main_regression_originalX).
 
   
 
@@ -172,7 +172,7 @@ Below, we report regression tables controlling for proportion of population abov
    python statacode.py --task check_age_above15 
    python statacode.py --task check_age_above20 
    ```
-   or directly check the data and stata code in the folder `StataCode/check_age_all`, `StataCode/check_age_above15`, and `StataCode/check_age_above20`.
+   or directly check the data and stata code in the folder `StataCode/check_age_all` [code](https://github.com/CHIDS-UMD/Covid19-Vaccination-Race-Disparity-Publish/blob/main/StataCode/check_age_all), `StataCode/check_age_above15` [code](https://github.com/CHIDS-UMD/Covid19-Vaccination-Race-Disparity-Publish/blob/main/StataCode/check_age_above15), and `StataCode/check_age_above20` [code](https://github.com/CHIDS-UMD/Covid19-Vaccination-Race-Disparity-Publish/blob/main/StataCode/check_age_above20).
 
 <a name="disparity-measure"/>
     
@@ -185,7 +185,7 @@ Below, we report regression tables controlling for proportion of population abov
    ```shell
    python statacode.py --task check_disparity_types 
    ```
-   or directly check the data and stata code in the folder `StataCode/check_disparity_types`.
+   or directly check the data and stata code in the folder `StataCode/check_disparity_types` [code](https://github.com/CHIDS-UMD/Covid19-Vaccination-Race-Disparity-Publish/blob/main/StataCode/check_disparity_types).
    
 
 <a name="date-ratetype"/>
@@ -197,7 +197,7 @@ Below, we report regression tables controlling for proportion of population abov
    ```shell
    python statacode.py --task diff_dates 
    ```
-   or directly check the data and stata code in the folder `StataCode/diff_dates`.
+   or directly check the data and stata code in the folder `StataCode/diff_dates` [code](https://github.com/CHIDS-UMD/Covid19-Vaccination-Race-Disparity-Publish/blob/main/StataCode/diff_dates).
    
    
    
@@ -215,7 +215,7 @@ Some regions saw large rates of residential mobility (people moving in or out) d
    ```shell
    python statacode.py --task residential_mobility 
    ```
-   or directly check the data and stata code in the folder `StataCode/residential_mobility`.
+   or directly check the data and stata code in the folder `StataCode/residential_mobility` [code](https://github.com/CHIDS-UMD/Covid19-Vaccination-Race-Disparity-Publish/blob/main/StataCode/residential_mobility).
    
   
  
@@ -230,7 +230,7 @@ Some regions saw large rates of residential mobility (people moving in or out) d
    ```shell
    python statacode.py --task recent_positive_rate 
    ```
-   or directly check the data and stata code in the folder `StataCode/recent_positive_rate`.
+   or directly check the data and stata code in the folder `StataCode/recent_positive_rate` [code](https://github.com/CHIDS-UMD/Covid19-Vaccination-Race-Disparity-Publish/blob/main/StataCode/recent_positive_rate).
    
    
    
@@ -246,7 +246,7 @@ Some regions saw large rates of residential mobility (people moving in or out) d
    ```shell
    python statacode.py --task avoid_collinearity 
    ```
-   or directly check the data and stata code in the folder `StataCode/avoid_collinearity`.
+   or directly check the data and stata code in the folder `StataCode/avoid_collinearity` [code](https://github.com/CHIDS-UMD/Covid19-Vaccination-Race-Disparity-Publish/blob/main/StataCode/avoid_collinearity).
    
    
    
@@ -262,7 +262,7 @@ Some regions saw large rates of residential mobility (people moving in or out) d
    ```shell
    python statacode.py --task subsample_analysis_6_and_10_states 
    ```
-   or directly check the data and stata code in the folder `StataCode/subsample_analysis_6_and_10_states`.
+   or directly check the data and stata code in the folder `StataCode/subsample_analysis_6_and_10_states` [code](https://github.com/CHIDS-UMD/Covid19-Vaccination-Race-Disparity-Publish/blob/main/StataCode/subsample_analysis_6_and_10_states).
    
 
    
@@ -276,7 +276,7 @@ Some regions saw large rates of residential mobility (people moving in or out) d
    ```shell
    python statacode.py --task vax_rate_on_all_white 
    ```
-   or directly check the data and stata code in the folder `StataCode/vax_rate_on_all_white`.
+   or directly check the data and stata code in the folder `StataCode/vax_rate_on_all_white` [code](https://github.com/CHIDS-UMD/Covid19-Vaccination-Race-Disparity-Publish/blob/main/StataCode/vax_rate_on_all_white).
    
    
    
